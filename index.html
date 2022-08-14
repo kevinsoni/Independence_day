@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>INDEPENDENCE DAY</title>
+</head>
+
+<body>
+    <h2>Happy<br><span class="linear-wipe">75'th<br></span>Independence<br>Day
+        <br>
+        <br>
+        <p class="linear-wipe">- From kevin soni & Family</p>
+    </h2>
+
+</body>
+<script>
+    function circle() {
+        let amount = 100;
+        let body = document.querySelector('body');
+        let i = 0;
+        while (i < amount) {
+            let element = document.createElement('i');
+            let posX = Math.floor(Math.random() * window.innerWidth);
+            let delay = Math.random() * -10;
+            let duration = Math.random() * 50;
+            let size = Math.random() * 90;
+
+            element.style.width = 10 + size + 'px';
+            element.style.height = 10 + size + 'px';
+            element.style.left = posX + 'px';
+            element.style.animationDelay = delay + 's';
+            element.style.animationDuration = 10 + duration + 's';
+            element.style.webkitBoxShadow = "0 30px 40px #0003"
+            body.appendChild(element);
+            i++
+        }
+    }
+    circle()
+</script>
+<script src="https://codepen.io/shshaw/pen/epmrgO.js"></script>
+
+</html>
